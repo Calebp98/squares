@@ -15,7 +15,9 @@ $(document).ready(function(){
     // $("body").append(createElement('<div> </div>'));
     var randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
 
-    $("ul").append($("<div></div>").draggable({ snap: true }).css('background-color', randomColor) );
+    $("#displayHex").text(randomColor)
+    $("ul").prepend($("<div></div>").draggable({ snap: true }).css('background-color', randomColor) );
+
     })
 });
 </script>
@@ -45,13 +47,12 @@ div {
 
 <h1> This is my squares thing</h1>
 <button> Generate Square </button>
+<p id = "displayHex"></p>
 
 <!-- <div > </div> -->
 
 <ul id = "sortable">
 </ul>
-
-
 
 
 
